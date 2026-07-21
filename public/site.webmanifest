@@ -1,6 +1,6 @@
 {
-  "name": "Template",
-  "short_name": "Template",
+  "name": "Newsletter sign-up form with success message",
+  "short_name": "Newsletter sign-up form with success message",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

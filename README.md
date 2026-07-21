@@ -1,91 +1,9 @@
-# Frontend Mentor - {{PROJECT_NAME}} solution
+# Frontend Mentor - Newsletter sign-up form with success message solution
 
-This is a solution to the [{{CHALLENGE_NAME}} on Frontend Mentor]({{CHALLENGE_URL}}).
+This is a solution to the [Newsletter sign-up form with success message on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).
 Frontend Mentor challenges help improve frontend skills by building realistic UI components.
 
 ## 🚀 Using this template
-
-### 1. Create a new project
-
-Click **"Use this template"** on GitHub and create a new repository.
-
-### 2. Enable GitHub Pages deploy
-
-After creating repo: Settings → Pages → Source → GitHub Actions.
-
-### 3. Update project metadata
-
-#### In `package.json`
-
-```json
-"name": "{{PROJECT_NAME}}"
-```
-
-### 4. Update Vite base path (for GitHub Pages)
-
-```js
-base: "/{{REPO_NAME}}/",
-```
-
-### 5. Update README
-
-Replace all placeholders:
-
-- {{PROJECT_NAME}}
-- {{CHALLENGE_NAME}}
-- {{CHALLENGE_URL}}
-- {{SOLUTION_URL}}
-- {{LIVE_URL}}
-
-### 6. Update links
-
-- Solution URL: {{SOLUTION_URL}}
-- Live Site URL: {{LIVE_URL}}
-
-### 7. Update dependencies (optional)
-
-```bash
-npx npm-check-updates -u
-```
-
-### 8. Update docs
-
-Put design files and style guide in docs directory.
-
-### 9. Update favicons
-
-Upload favicons to public directory (realfavicongenerator.net is recommended).
-
-### 10. Upload assets
-
-Put fonts to `src/fonts/` and content images to `src/assets/images`.
-
-### 11. Generate optimized image formats
-
-After adding images, run:
-
-```bash
-npm run images
-```
-
-This generates optimized .webp and .avif versions recursively from:
-
-```bash
-src/assets/images/
-```
-
-The script:
-
-- converts PNG/JPG/JPEG files to WebP and AVIF
-- preserves the original files as fallbacks
-- compresses images using Sharp
-- skips already generated files
-
-Run this whenever new images are added.
-
-### 12. Update index.html
-
-Change text content and meta tags values.
 
 ### 13. Add preview images
 
@@ -120,8 +38,13 @@ Upload `./preview.png` (894xHEIGHT size) and create `public/og-image.png` (1200x
 
 Users should be able to:
 
-- {{CHALLENGE_REQUIREMENT_1}}
-- {{CHALLENGE_REQUIREMENT_2}}
+- Add their email and submit the form
+- See a success message with their email after successfully submitting the form
+- See form validation messages if:
+  - The field is left empty
+  - The email address is not formatted correctly
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 ### Preview
 
@@ -135,8 +58,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repo]({{SOLUTION_URL}})
-- Live Site URL: [Live Site]({{LIVE_URL}})
+- Solution URL: [GitHub Repo](https://github.com/vlrnsnk/newsletter-sign-up-with-success-message)
+- Live Site URL: [Live Site](https://vlrnsnk.github.io/newsletter-sign-up-with-success-message/)
 
 ## Features
 
