@@ -4,21 +4,21 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Frontend Mentor challenge: "Newsletter sign-up form with success message". A static frontend project built with Vite, SCSS, and vanilla JavaScript. Features a responsive form with email validation and a success confirmation state. See [AGENTS.md](AGENTS.md) for the mentoring approach tailored for junior-level developers.
+Frontend Mentor challenge: "Newsletter sign-up form with success message". A static frontend project built with Vite, SCSS, and vanilla JavaScript. Features a responsive form with email validation and a success confirmation state.
 
 ## Development Commands
 
 ```bash
-# Start dev server
+# Start dev server (opens browser at localhost:5173)
 npm run dev
 
-# Build for production
+# Build for production (outputs to dist/)
 npm run build
 
 # Preview production build
 npm run preview
 
-# Format code (Prettier)
+# Format code with Prettier
 npm run format
 
 # Check formatting
@@ -33,10 +33,13 @@ npm run lint:scss:fix
 # Validate HTML
 npm run lint:html
 
+# Fix HTML validation issues
+npm run lint:html:fix
+
 # Optimize images (generates WebP/AVIF)
 npm run images
 
-# EditorConfig check
+# Check EditorConfig compliance
 npm run editorconfig
 ```
 
@@ -46,25 +49,25 @@ Pre-commit hooks (Husky + lint-staged) automatically run formatting and linting 
 
 ### SCSS Module System
 
-SCSS uses modern `@use`/`@forward` pattern with modular directory structure:
+Modern `@use`/`@forward` pattern with modular directory structure:
 
 - **abstracts/** – Variables (`_variables.scss`), mixins (`_mixins.scss`), functions (`_functions.scss`), placeholders (`_placeholders.scss`)
 - **vendors/** – Third-party CSS (normalize reset)
-- **base/** – Reset (`_reset.scss`), base styles (`_base.scss`), typography (`_typography.scss`), utilities (`_utilities.scss`), fonts (`_fonts.scss`)
+- **base/** – Reset, base styles, typography, utilities, fonts
 - **layout/** – Page structure (`_main.scss`), grid system
 - **components/** – Reusable UI components (buttons, cards, forms)
 - **pages/** – Page-specific styles
 - **themes/** – Theme variations
 
-Each directory has an `_index.scss` that forwards its partials. `main.scss` imports them in order: abstracts → vendors → base → layout → components → pages → themes.
+Each directory has an `_index.scss` that forwards its partials. `main.scss` imports in order: abstracts → vendors → base → layout → components → pages → themes.
 
 ### Design Tokens
 
-CSS custom properties are defined in [`src/scss/abstracts/_variables.scss`](src/scss/abstracts/_variables.scss) and mapped from SCSS variables. Use these for consistent theming.
+CSS custom properties defined in `src/scss/abstracts/_variables.scss` and mapped from SCSS variables. Use these for consistent theming.
 
 ### Stylelint Conventions
 
-Property ordering is enforced (linting warning): layout → box-model → flex → grid → visual → typography → interaction. See [`stylelint.config.js`](stylelint.config.js).
+Property ordering enforced (linting warning): layout → box-model → flex → grid → visual → typography → interaction. See `stylelint.config.js`.
 
 ### Assets
 
@@ -84,17 +87,38 @@ Single `index.html` at project root with:
 
 ### JavaScript
 
-Vanilla JavaScript expected at `src/js/main.js` (not yet created). Connect via `<script type="module" src="/src/js/main.js">` if adding interactivity for:
+Vanilla JavaScript expected at `src/js/main.js` (not yet created). Connect via `<script type="module" src="/src/js/main.js">` for:
 
 - Email validation on form submission
 - Switching between sign-up and success states
 - Error message display
 
-## Teaching Philosophy
+### Vite Configuration
 
-See [AGENTS.md](AGENTS.md) for mentoring approach:
+`vite.config.js` sets:
 
-- Explain with "why" attached
-- Guided discovery through hint progression
-- Encourage debugging techniques and DevTools usage
-- Never provide complete copy-paste solutions
+- Base path: `/newsletter-sign-up-with-success-message/` in production, `/` in dev
+- Dev server: port 5173, auto-open, strict port
+- Build: outputs to `dist/`, empties directory first
+
+### Deployment
+
+GitHub Actions workflow (`.github/workflows/deploy.yml`) deploys to GitHub Pages on push to main. Builds with Node 24, caches npm dependencies.
+
+## Key Files Reference
+
+- `package.json` – Scripts, dependencies, lint-staged config
+- `vite.config.js` – Vite configuration
+- `src/scss/main.scss` – Main SCSS entry point
+- `src/scss/abstracts/_variables.scss` – Design tokens
+- `index.html` – Main HTML entry
+- `scripts/optimize-images.js` – Sharp image optimization script
+- `.github/workflows/deploy.yml` – GitHub Pages deployment
+- `stylelint.config.js` – Stylelint configuration
+- `.htmlvalidate.json` – HTML validation config
+
+## Git
+
+- Main branch: `main`
+- Pre-commit hooks enforced via Husky
+- Commit messages follow conventional commits
