@@ -12,6 +12,25 @@
 }
 
 /* Text presets */
+@mixin text-preset-1() {
+  @include text($font-roboto, 3.5rem, 700, 1, 0);
+}
+
+@mixin text-preset-1-mobile() {
+  @include text($font-roboto, 2.5rem, 700, 1, 0);
+}
+
+@mixin text-preset-2-bold() {
+  @include text($font-roboto, 1rem, 700, 1.5, 0);
+}
+
+@mixin text-preset-2-regular() {
+  @include text($font-roboto, 1rem, 400, 1.5, 0);
+}
+
+@mixin text-preset-3() {
+  @include text($font-roboto, 0.75rem, 700, 1.5, 0);
+}
 
 /* Transitions */
 @mixin transition($properties...) {
