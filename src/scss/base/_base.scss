@@ -5,4 +5,18 @@
   /* stylelint-disable-next-line value-keyword-case */
   --font-family-serif: Georgia, Cambria, 'Times New Roman', serif;
   --font-size-base: 100%;
+  --color-white: #{abstracts.$color-white};
+  --color-grey: #{abstracts.$color-grey};
+  --color-red: #{abstracts.$color-red};
+  --color-blue-800: #{abstracts.$color-blue-800};
+  --color-blue-700: #{abstracts.$color-blue-700};
+  --spacing-100: #{abstracts.$spacing-100};
+  --spacing-200: #{abstracts.$spacing-200};
+  --spacing-300: #{abstracts.$spacing-300};
+  --spacing-400: #{abstracts.$spacing-400};
+  --spacing-500: #{abstracts.$spacing-500};
+  --spacing-600: #{abstracts.$spacing-600};
+  --spacing-800: #{abstracts.$spacing-800};
+  --spacing-900: #{abstracts.$spacing-900};
+  --spacing-1300: #{abstracts.$spacing-1300};
 }
