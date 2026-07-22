@@ -1,5 +1,25 @@
 /* Colors */
+$color-white: hsl(0deg 100% 100%);
+$color-grey: hsl(0deg 0% 58%);
+$color-red: hsl(4deg 100% 67%);
+
+/* Blue scale */
+$color-blue-800: hsl(234deg 29% 20%);
+$color-blue-700: hsl(235deg 18% 26%);
+
+/* Gradients */
+$gradient-4: linear-gradient(90deg, hsl(15deg 100% 61%) 0%, hsl(346deg 100% 66%) 100%);
 
 /* Spacing */
+$spacing-100: 0.5rem; /* 8px */
+$spacing-200: 1rem; /* 16px */
+$spacing-300: 1.5rem; /* 24px */
+$spacing-400: 2rem; /* 32px */
+$spacing-500: 2.5rem; /* 40px */
+$spacing-600: 3rem; /* 48px */
+$spacing-800: 4rem; /* 64px */
+$spacing-900: 4.5rem; /* 72px */
+$spacing-1300: 6.5rem; /* 104px */
 
-/* Font Family */
+/* Font family */
+$font-roboto: 'Roboto', sans-serif;
