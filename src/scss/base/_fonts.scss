@@ -1,13 +1,16 @@
 /* Fonts */
 
-$fonts: ();
+$fonts: (
+  400: 'Roboto-Regular',
+  700: 'Roboto-Bold',
+);
 
 @each $weight, $file in $fonts {
   @font-face {
     font-family: sans-serif;
     font-weight: $weight;
     font-style: normal;
-    src: url('../../assets/fonts/{FONT-DIR}/#{$file}.woff2') format('woff2');
+    src: url('../../assets/fonts/Roboto/#{$file}.woff2') format('woff2');
     font-display: swap;
   }
 }
