@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+.sign-up {
+  background-color: var(--color-white);
+  color: var(--color-blue-800);
+
+  &__image {
+    margin: 0 auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    padding: var(--spacing-500) var(--spacing-300) 2.75rem;
+    flex-direction: column;
+    gap: var(--spacing-300);
+  }
+
+  &__title {
+    @include text-preset-1-mobile;
+  }
+
+  &__description {
+    @include text-preset-2-regular;
+  }
+
+  &__list {
+    margin-block-end: var(--spacing-200);
+  }
+}

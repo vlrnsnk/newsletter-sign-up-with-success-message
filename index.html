@@ -48,34 +48,40 @@
             height="284"
           />
         </picture>
-        <h2 class="sign-up__title">Stay updated!</h2>
-        <p class="sign-up__description">
-          Join 60,000+ product managers receiving monthly updates on:
-        </p>
-        <ul class="sign-up__list sign-up-list">
-          <li class="sign-up-list__item">Product discovery and building what matters</li>
-          <li class="sign-up-list__item">Measuring to ensure updates are a success</li>
-          <li class="sign-up-list__item">And much more!</li>
-        </ul>
-        <form class="sign-up__form sign-up-form" novalidate>
-          <label class="sign-up-form__label" for="email">Email address</label>
-          <input
-            class="sign-up-form__input input"
-            id="email"
-            type="email"
-            name="email"
-            placeholder="email@company.com"
-            autocomplete="email"
-            required
-            aria-describedby="email-error"
-          />
-          <span class="sign-up-form__error" id="email-error" role="alert" hidden
-            >Valid email required</span
-          >
-          <button class="sign-up-form__button button" type="submit">
-            Subscribe to monthly newsletter
-          </button>
-        </form>
+        <div class="sign-up__wrapper">
+          <h2 class="sign-up__title">Stay updated!</h2>
+          <p class="sign-up__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <ul class="sign-up__list sign-up-list">
+            <li class="sign-up-list__item">Product discovery and building what matters</li>
+            <li class="sign-up-list__item">Measuring to ensure updates are a success</li>
+            <li class="sign-up-list__item">And much more!</li>
+          </ul>
+          <form class="sign-up__form sign-up-form" novalidate>
+            <div class="text-input">
+              <div class="text-input__wrapper">
+                <label class="text-input__label" for="email">Email address</label>
+                <span class="text-input__error" id="email-error" role="alert" hidde
+                  >Valid email required</span
+                >
+              </div>
+              <input
+                class="text-input__input"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="email@company.com"
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+              />
+            </div>
+            <button class="sign-up-form__button button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
       </section>
       <section class="success-message" hidden role="status">
         <img

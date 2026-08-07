@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.sign-up-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-100);
+  color: var(--color-blue-800);
+
+  &__item {
+    @include text-preset-2-regular;
+
+    display: flex;
+    gap: var(--spacing-200);
+
+    &::before {
+      display: block;
+      width: 1.3125rem;
+      height: 1.3125rem;
+      flex-shrink: 0;
+      background-image: url('../../assets/images/icon-list.svg');
+      content: '';
+    }
+  }
+}

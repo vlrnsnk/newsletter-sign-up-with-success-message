@@ -2,6 +2,7 @@
 $color-white: hsl(0deg 100% 100%);
 $color-grey: hsl(0deg 0% 58%);
 $color-red: hsl(4deg 100% 67%);
+$color-red-100: hsl(2deg 100% 95%);
 
 /* Blue scale */
 $color-blue-800: hsl(234deg 29% 20%);
@@ -23,3 +24,7 @@ $spacing-1300: 6.5rem; /* 104px */
 
 /* Font family */
 $font-roboto: 'Roboto', sans-serif;
+
+/* Motion */
+$transition-duration: 200ms;
+$transition-easing: ease-in-out;
