@@ -1,0 +1,32 @@
+@use '../abstracts' as *;
+
+.success-message {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  padding: 9.3125rem var(--spacing-300) 4.375rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-400);
+  background-color: var(--color-white);
+  border-radius: var(--spacing-100);
+  color: var(--color-blue-800);
+
+  &__title {
+    @include text-preset-1-mobile;
+  }
+
+  &__description {
+    @include text-preset-2-regular;
+
+    margin-block-end: auto;
+  }
+
+  &__email {
+    @include text-preset-2-bold;
+  }
+
+  &__button {
+    align-self: stretch;
+  }
+}
