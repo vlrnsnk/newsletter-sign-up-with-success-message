@@ -12,6 +12,10 @@
   border-radius: var(--spacing-100);
   color: var(--color-blue-800);
 
+  &[hidden] {
+    display: none;
+  }
+
   &__title {
     @include text-preset-1-mobile;
   }

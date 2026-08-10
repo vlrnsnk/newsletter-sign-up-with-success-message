@@ -17,6 +17,10 @@
   }
 
   &__error {
+    &[hidden] {
+      display: none;
+    }
+
     color: var(--color-red);
   }
 
