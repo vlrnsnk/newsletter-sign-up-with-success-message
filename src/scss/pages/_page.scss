@@ -1,4 +1,9 @@
 .page {
-  position: relative;
+  min-height: 100vh;
   background-color: var(--color-blue-700);
+
+  &__content {
+    max-width: 33rem;
+    margin: 0 auto;
+  }
 }

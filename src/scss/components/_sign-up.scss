@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
 .sign-up {
+  min-height: 100vh;
   background-color: var(--color-white);
   color: var(--color-blue-800);
 
