@@ -1,9 +1,24 @@
 @use '../abstracts' as *;
 
 .sign-up {
+  position: absolute;
+  inset: 0;
   min-height: 100vh;
   background-color: var(--color-white);
+  opacity: 0;
   color: var(--color-blue-800);
+  transform: translateY(0.5rem);
+
+  @include transition(opacity, transform);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &[hidden] {
+    display: none;
+  }
 
   &__image {
     margin: 0 auto;

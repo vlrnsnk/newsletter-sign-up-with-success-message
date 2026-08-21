@@ -20,6 +20,44 @@ export function initNewsletterSignup() {
     emailError.hidden = true;
   }
 
+  function showSuccess() {
+    // Both sections visible, animate cross-fade
+    signUpSection.hidden = false;
+    successSection.hidden = false;
+
+    requestAnimationFrame(() => {
+      signUpSection.classList.remove('is-visible');
+      successSection.classList.add('is-visible');
+    });
+  }
+
+  function hideSuccess() {
+    // Both sections visible, animate cross-fade back
+    signUpSection.hidden = false;
+    successSection.hidden = false;
+
+    requestAnimationFrame(() => {
+      signUpSection.classList.add('is-visible');
+      successSection.classList.remove('is-visible');
+    });
+
+    function restoreForm() {
+      successSection.hidden = true;
+      signUpSection.hidden = false;
+      form.reset();
+      emailInput.focus();
+      signUpSection.removeEventListener('transitionend', onTransitionEnd);
+    }
+
+    function onTransitionEnd(event) {
+      if (event.target === signUpSection && event.propertyName === 'opacity') {
+        restoreForm();
+      }
+    }
+
+    signUpSection.addEventListener('transitionend', onTransitionEnd);
+  }
+
   // Form submission handler
   function onFormSubmit(event) {
     event.preventDefault();
@@ -31,17 +69,13 @@ export function initNewsletterSignup() {
     }
 
     hideError();
-    signUpSection.hidden = true;
-    successSection.hidden = false;
+    showSuccess();
     emailSpan.textContent = emailInput.value;
   }
 
   // Dismiss button handler
   function onDismissClick() {
-    successSection.hidden = true;
-    signUpSection.hidden = false;
-    form.reset();
-    emailInput.focus();
+    hideSuccess();
   }
 
   // Clear errors as soon as the user starts typing
