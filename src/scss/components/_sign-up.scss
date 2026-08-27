@@ -42,4 +42,29 @@
   &__list {
     margin-block-end: var(--spacing-200);
   }
+
+  @media (width >= 768px) {
+    position: static;
+    min-height: auto;
+    padding: var(--spacing-500);
+    border-radius: 2.25rem;
+
+    &__image {
+      min-width: 33rem;
+      border-radius: var(--spacing-200);
+      margin-block-end: var(--spacing-500);
+    }
+
+    &__wrapper {
+      padding: 0;
+    }
+
+    &__title {
+      @include text-preset-1;
+    }
+
+    &__list {
+      margin-block-end: 0;
+    }
+  }
 }

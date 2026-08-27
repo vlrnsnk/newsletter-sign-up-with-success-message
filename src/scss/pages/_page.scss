@@ -7,4 +7,19 @@
     max-width: 33rem;
     margin: 0 auto;
   }
+
+  @media (width >= 768px) {
+    &__content {
+      display: grid;
+
+      // max-width: none;
+      max-width: 100%;
+      min-height: 100vh;
+      place-items: center;
+
+      > * {
+        grid-area: 1 / 1; // overlay all direct children (sign-up + success-message)
+      }
+    }
+  }
 }

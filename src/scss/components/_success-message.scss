@@ -47,4 +47,16 @@
   &__button {
     align-self: stretch;
   }
+
+  @media (width >= 768px) {
+    position: static;
+    max-width: 31.5rem;
+    min-height: auto;
+    padding: var(--spacing-800);
+    border-radius: 2.25rem;
+
+    &__title {
+      @include text-preset-1;
+    }
+  }
 }
