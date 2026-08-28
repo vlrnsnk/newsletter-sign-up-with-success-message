@@ -3,12 +3,6 @@
 This is a solution to the [Newsletter sign-up form with success message on Frontend Mentor](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv).
 Frontend Mentor challenges help improve frontend skills by building realistic UI components.
 
-## 🚀 Using this template
-
-### 13. Add preview images
-
-Upload `./preview.png` (894xHEIGHT size) and create `public/og-image.png` (1200x630) after the project is ready for ease of sharing.
-
 ## Table of contents
 
 - [Overview](#overview)
@@ -63,36 +57,40 @@ Users should be able to:
 
 ## Features
 
-- Responsive mobile-first layout
-- Accessible interactive states (`hover`, `focus-visible`)
-- Semantic HTML structure
-- Modular SCSS architecture using `@use`
+- Responsive mobile-first layout (mobile, tablet, desktop)
+- Email validation with inline error states
+- Cross-fade transition between form and success state
+- Accessible interactive states (`:hover`, `:focus-visible`)
+- Semantic HTML with ARIA error messaging
+- Modular SCSS architecture (`@use`/`@forward`)
 - CSS custom properties for design tokens
-- Stylelint configuration with property ordering
-- Optimized production build with Vite
-- Automated image optimization pipeline with Sharp (WebP + AVIF generation)
-- Automated deployment to GitHub Pages via GitHub Actions
+- Stylelint with property ordering rules
+- Vite build pipeline
+- Sharp image optimization (WebP + AVIF)
+- GitHub Pages deployment via GitHub Actions
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- SCSS (modular architecture: abstracts, base, components, layout)
-- CSS custom properties (design tokens via SCSS variables)
-- Flexbox / Grid
-- Mobile-first workflow
-- Vite
-- Sharp image processing
-- Stylelint (code quality + property ordering)
-- HTML validation
-- Husky (pre-commit hooks)
+- Semantic HTML5
+- SCSS (7-1 pattern: abstracts, vendors, base, layout, components, pages, themes)
+- CSS custom properties + SCSS variables
+- Flexbox and CSS Grid
+- Mobile-first responsive workflow
+- Vite 8
+- Sharp (image optimization)
+- Stylelint (config-standard-scss + property order)
+- HTML validate
+- Husky + lint-staged
 
 ### What I learned
 
-- {{LEARNING_1}}
-- {{LEARNING_2}}
-- {{LEARNING_3}}
+- CSS Grid overlay pattern (`grid-area: 1/1`) for cross-fading sibling components without absolute positioning
+- `<picture>` source ordering for art direction across breakpoints vs resolution switching
+- Token-based breakpoint system via SCSS variables mapped to mixins
+- That Figma specs can be off by 4-8px and chasing pixel perfection wastes time
+- That `<picture>` (not `<img>`) is the flex item when reordering with `order`
 
 ## Setup
 
@@ -172,27 +170,43 @@ Project is built with Vite and deployed to GitHub Pages using GitHub Actions.
 
 Lighthouse score (example):
 
-- Performance: {{PERF_SCORE}}
-- Accessibility: {{ACCESSIBILITY_SCORE}}
-- Best Practices: {{BEST_PRACTICES_SCORE}}
-- SEO: {{SEO_SCORE}}
+- Performance: 100
+- Accessibility: 95
+- Best Practices: 100
+- SEO: 100
+
+Accessibility score was reduced due to insufficient color contrast in the provided design palette.
 
 ## Continued Development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+- Add unit tests for form validation logic
+- Implement actual form submission (currently no backend)
+- Improve color contrast (Lighthouse flagged the design palette)
 
 ## Useful Resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [CSS Grid overlay technique](https://css-tricks.com/snippets/css/complete-guide-grid/) - for the cross-fade between sign-up and success states
+- [Modern CSS reset](https://www.joshwcomeau.com/css/custom-css-reset/) - base reset patterns
+- [Stylelint SCSS config](https://github.com/stylelint-scss/stylelint-config-standard-scss) - property ordering for SCSS
+- [Frontend Mentor challenge](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv) - original design and spec
 
 ## AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+Used Claude (Sonnet 4.5 / Opus 5) via Claude Code as a pair-programming partner throughout the project.
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+**What it helped with:**
+
+- Debugging CSS layout issues (centering, grid overlay, `<picture>` reordering)
+- Refactoring SCSS architecture decisions
+- Sanity-checking pixel-perfect design mismatches (saved hours of chasing figma bugs)
+- README structure and project documentation
+
+**What didn't work:**
+
+- Initial overengineered suggestions (animating transitions on absolute-positioned elements when grid overlay was simpler)
+- Assumptions about what design was showing without me sharing the image
+
+**Takeaway:** AI is fastest when you already know what you want — it accelerates decisions, doesn't make them.
 
 ## Author
 
@@ -202,9 +216,8 @@ Describe how you used AI tools (if any) during this project. This helps demonstr
 
 ## Notes
 
-- Accessibility-focused semantic markup
-- Mobile-first responsive workflow
-- Modular SCSS architecture using `@use`
-- Consistent styling enforced with Stylelint
-- Optimized Vite build pipeline
-- GitHub Pages deployment with GitHub Actions
+- No backend — form submission is client-side only and shows success state immediately
+- Email regex follows the HTML5 living standard (more permissive than naive `[a-z]+@[a-z]+`)
+- `prefers-reduced-motion: reduce` is handled globally in `_utilities.scss` — disables all transitions
+- All images are SVGs (vector), so no WebP/AVIF variants are generated for this project
+- `font-size: 100%` on root with `rem` units = 1rem = 16px (browser default)
