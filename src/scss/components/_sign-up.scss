@@ -67,4 +67,26 @@
       margin-block-end: 0;
     }
   }
+
+  @media (width >= 1440px) {
+    display: flex;
+    max-width: 56.5rem;
+    padding: var(--spacing-400);
+    align-items: center;
+    gap: var(--spacing-800);
+
+    &__picture {
+      order: 2;
+    }
+
+    &__image {
+      min-width: 25rem;
+      margin-block-end: 0;
+    }
+
+    &__wrapper {
+      order: 1;
+      gap: var(--spacing-400);
+    }
+  }
 }

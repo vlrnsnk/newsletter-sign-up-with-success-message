@@ -11,8 +11,6 @@
   @media (width >= 768px) {
     &__content {
       display: grid;
-
-      // max-width: none;
       max-width: 100%;
       min-height: 100vh;
       place-items: center;

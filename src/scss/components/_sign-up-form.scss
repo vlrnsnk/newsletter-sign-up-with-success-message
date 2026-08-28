@@ -6,4 +6,8 @@
   @media (width >= 768px) {
     gap: var(--spacing-200);
   }
+
+  @media (width >= 1440px) {
+    gap: var(--spacing-300);
+  }
 }
