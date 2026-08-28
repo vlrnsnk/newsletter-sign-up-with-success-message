@@ -1,13 +1,15 @@
+@use '../abstracts' as *;
+
 .sign-up-form {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
 
-  @media (width >= 768px) {
+  @include tablet {
     gap: var(--spacing-200);
   }
 
-  @media (width >= 1440px) {
+  @include desktop {
     gap: var(--spacing-300);
   }
 }

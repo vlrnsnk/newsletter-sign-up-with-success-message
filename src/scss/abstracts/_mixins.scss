@@ -46,3 +46,15 @@
 
   transition: $transitions;
 }
+
+@mixin tablet {
+  @media (width >= $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (width >= $breakpoint-desktop) {
+    @content;
+  }
+}

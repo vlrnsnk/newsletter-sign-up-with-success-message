@@ -43,7 +43,7 @@
     margin-block-end: var(--spacing-200);
   }
 
-  @media (width >= 768px) {
+  @include tablet {
     position: static;
     min-height: auto;
     padding: var(--spacing-500);
@@ -68,7 +68,7 @@
     }
   }
 
-  @media (width >= 1440px) {
+  @include desktop {
     display: flex;
     max-width: 56.5rem;
     padding: var(--spacing-400);

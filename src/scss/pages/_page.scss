@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .page {
   min-height: 100vh;
   background-color: var(--color-blue-700);
@@ -8,7 +10,7 @@
     margin: 0 auto;
   }
 
-  @media (width >= 768px) {
+  @include tablet {
     &__content {
       display: grid;
       max-width: 100%;

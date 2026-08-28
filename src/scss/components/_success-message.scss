@@ -48,7 +48,7 @@
     align-self: stretch;
   }
 
-  @media (width >= 768px) {
+  @include tablet {
     position: static;
     max-width: 31.5rem;
     min-height: auto;
