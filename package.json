@@ -15,8 +15,7 @@
     "lint:html:fix": "html-validate --fix \"*.html\"",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "prepare": "husky",
-    "images": "node scripts/optimize-images.js"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",

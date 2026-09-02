@@ -6,7 +6,7 @@ Frontend Mentor challenges help improve frontend skills by building realistic UI
 ## Table of contents
 
 - [Overview](#overview)
-  - [Preview](#screenshot)
+  - [Preview](#preview)
   - [Links](#links)
 - [Features](#features)
 - [My process](#my-process)
@@ -14,7 +14,6 @@ Frontend Mentor challenges help improve frontend skills by building realistic UI
   - [What I learned](#what-i-learned)
 - [Setup](#setup)
   - [Installation](#installation)
-  - [Image Optimization](#image-optimization)
   - [Development](#development)
   - [Build](#build)
   - [Linting](#linting)
@@ -100,38 +99,6 @@ Users should be able to:
 npm install
 ```
 
-### Image optimization
-
-Generate modern image formats:
-
-```bash
-npm run images
-```
-
-This creates .webp and .avif versions of images inside:
-
-```bash
-src/assets/images/
-```
-
-Example:
-
-```bash
-image-hero.png
-image-hero.webp
-image-hero.avif
-```
-
-Use <picture> with AVIF → WebP → original fallback:
-
-```html
-<picture>
-  <source srcset="image.avif" type="image/avif" />
-  <source srcset="image.webp" type="image/webp" />
-  <img src="image.png" alt="" />
-</picture>
-```
-
 ### Development
 
 ```bash
@@ -168,7 +135,7 @@ Project is built with Vite and deployed to GitHub Pages using GitHub Actions.
 
 ## Performance
 
-Lighthouse score (example):
+Lighthouse score:
 
 - Performance: 100
 - Accessibility: 95
